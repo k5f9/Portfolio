@@ -14,8 +14,11 @@ export function useWeather() {
 
   async function fetchWeather() {
     const { public: { apiBase } } = useRuntimeConfig()
-    weather.value = await $fetch(`${apiBase}/weather`)
+    const data = await $fetch(`${apiBase}/weather`)
+    console.log('WEATHER RAW:', data)
+    weather.value = data as any
   }
+
 
 
 
