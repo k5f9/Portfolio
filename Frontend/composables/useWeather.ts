@@ -23,11 +23,16 @@ export function useWeather() {
     weather.value = data
   }
 
-  onMounted(fetchWeather)
+  // ВАЖНО: без onMounted
+  if (!weather.value) {
+    fetchWeather()
+  }
 
   return {
     weather,
     weatherType,
   }
 }
+
+
 
