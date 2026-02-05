@@ -102,12 +102,12 @@
 
     </div>
   </div>
-  <Analytics />
+  
 </template>
 
 <script setup lang="ts">
 
-import { Analytics } from '@vercel/analytics/next';
+
 
 
 

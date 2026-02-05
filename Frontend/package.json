@@ -10,7 +10,6 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@vercel/analytics": "^1.6.1",
     "nuxt": "^4.2.2",
     "openweathermap": "^1.0.0",
     "openweathermap-ts": "^1.2.10",
