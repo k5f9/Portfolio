@@ -236,30 +236,28 @@ const rainCanvas = ref<HTMLCanvasElement | null>(null)
 import { startRain } from '../../effects/rain'
 
 
-watch(weatherType, (type) => {
-  if (type === 'rain' || type === 'storm') {
-    nextTick(() => {
-      if (rainCanvas.value) startRain(rainCanvas.value)
-    })
-  }
-})
-
-
 import { startSnow } from '../../effects/snow'
 
 const snowCanvas = ref<HTMLCanvasElement | null>(null)
 
-watch(weatherType, (val) => {
-  if (val === 'snow') {
-    nextTick(() => {
-      if (snowCanvas.value) {
-        startSnow(snowCanvas.value)
-      }
-    })
-  }
-})
+watch(
+  weatherType,
+  (type) => {
+    if (type === 'rain' || type === 'storm') {
+      nextTick(() => {
+        if (rainCanvas.value) startRain(rainCanvas.value)
+      })
+    }
 
-  
+    if (type === 'snow') {
+      nextTick(() => {
+        if (snowCanvas.value) startSnow(snowCanvas.value)
+      })
+    }
+  },
+  { immediate: true }
+)
+
 
 //DISCORD
 interface Status {
