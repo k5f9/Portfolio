@@ -1,0 +1,22 @@
+# Frontend (Nuxt)
+Frontend/node_modules
+Frontend/.nuxt
+Frontend/.output
+Frontend/dist
+Frontend/.env
+Frontend/.env.*
+
+# Logs
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Backend (Go)
+Backend/.env
+Backend/bin
+Backend/*.exe
+
+# OS / Editor
+.DS_Store
+.idea
+.vscode
