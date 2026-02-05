@@ -44,13 +44,8 @@
 
 
 
-      <div class="absolute bottom-6 left-6 text-xs text-black/40">
-        Created by k5f0's
-      </div>
-
-
       <div class="absolute bottom-6 text-xs text-black/40">
-        Copyright © K5f0 2026  Все права защищены
+        Copyright © k5f0 2026  Все права защищены
       </div>
 
 
