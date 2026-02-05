@@ -7,7 +7,7 @@ interface Weather {
 }
 
 export function useWeather() {
-  const weather = useState<Weather | null>('weather', () => null)
+  const weather = ref<Weather | null>(null)
 
   const weatherType = computed(() => {
     return weather.value?.type?.toLowerCase() ?? 'default'
@@ -19,6 +19,7 @@ export function useWeather() {
     console.log('WEATHER RAW:', data)
     weather.value = data // ← вот тут теперь всё ок
   }
+  console.log('USE WEATHER INSTANCE')
 
   return {
     weather,
