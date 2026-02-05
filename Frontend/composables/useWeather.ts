@@ -13,9 +13,11 @@ export function useWeather() {
   type WeatherKind = 'clear' | 'rain' | 'snow' | 'storm' | 'default'
 
   const weatherType = computed<WeatherKind>(() => {
-    if (!weather.value) return 'default'
-    return weather.value.type.toLowerCase() as WeatherKind
+    const type = weather.value?.type
+    if (!type) return 'default'
+    return type.toLowerCase() as WeatherKind
   })
+
 
 
   async function fetchWeather() {
