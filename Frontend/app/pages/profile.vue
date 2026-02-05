@@ -273,8 +273,8 @@ const status = ref<Status | null>(null)
 
 
 onMounted(async () => {
-  const baseURL = import.meta.env.NUXT_PUBLIC_API_URL
-  status.value = await $fetch(`${baseURL}/discord`)
+  const { public: { apiBase } } = useRuntimeConfig()
+  status.value = await $fetch(`${apiBase}/discord`)
 })
 
 const isHOI = computed(() =>

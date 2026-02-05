@@ -3,6 +3,11 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   compatibilityDate: '2026-01-27',
   modules: ['@nuxtjs/tailwindcss'],
+  runtimeConfig: {
+    public: {
+      apiBase: process.env.NUXT_PUBLIC_API_URL,
+    },
+  },
   app: {
     pageTransition: {
       name: 'page',
