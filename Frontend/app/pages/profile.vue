@@ -223,11 +223,18 @@
 
 import { useWeather } from '../../composables/useWeather'
 
-const { weather, weatherType } = useWeather()
-console.log("const weather = ",weather)
+const { weather, weatherType, fetchWeather } = useWeather()
 
-const temp = computed(() => weather.value?.temp ?? '—')
-const condition = computed(() => weather.value?.condition ?? '')
+onMounted(() => {
+  if (!weather.value) {
+    fetchWeather()
+  }
+})
+
+const temp = computed(() => weather.value?.temp)
+const condition = computed(() => weather.value?.condition)
+
+
 
 //RAIN
 const rainCanvas = ref<HTMLCanvasElement | null>(null)

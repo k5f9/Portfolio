@@ -1,5 +1,4 @@
-import { ref, computed, onMounted } from 'vue'
-
+import { computed } from 'vue'
 
 interface Weather {
   condition: string
@@ -8,31 +7,22 @@ interface Weather {
 }
 
 export function useWeather() {
-  const weather = useState<any | null>('weather', () => null)
+  const weather = useState<Weather | null>('weather', () => null)
 
   const weatherType = computed(() => {
-    const type = weather.value?.type
-    if (!type) return 'default'
-    return type.toLowerCase()
+    return weather.value?.type?.toLowerCase() ?? 'default'
   })
 
   async function fetchWeather() {
     const { public: { apiBase } } = useRuntimeConfig()
-    const data = await $fetch(`${apiBase}/weather`)
+    const data = await $fetch<Weather>(`${apiBase}/weather`)
     console.log('WEATHER RAW:', data)
-    weather.value = data
-  }
-
-  // ВАЖНО: без onMounted
-  if (!weather.value) {
-    fetchWeather()
+    weather.value = data // ← вот тут теперь всё ок
   }
 
   return {
     weather,
     weatherType,
+    fetchWeather,
   }
 }
-
-
-
