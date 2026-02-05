@@ -243,6 +243,12 @@ const snowCanvas = ref<HTMLCanvasElement | null>(null)
 watch(
   weatherType,
   (type) => {
+    console.log('WATCH FIRED, type =', type)
+
+    if (type === 'clear') {
+      console.log('CLEAR WEATHER — NO EFFECT')
+    }
+
     if (type === 'rain' || type === 'storm') {
       nextTick(() => {
         if (rainCanvas.value) startRain(rainCanvas.value)
@@ -254,14 +260,10 @@ watch(
         if (snowCanvas.value) startSnow(snowCanvas.value)
       })
     }
-
-    if (type === 'clear') {
-      console.log('CLEAR WEATHER — NO EFFECT')
-    }
-
   },
   { immediate: true }
 )
+
 
 
 //DISCORD
