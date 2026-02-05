@@ -49,6 +49,11 @@
       </div>
 
 
+      <div class="absolute bottom-6 text-xs text-black/40">
+        Copyright © K5f0 2026  Все права защищены
+      </div>
+
+
 
       <div
         class="absolute inset-0 opacity-[0.1] pointer-events-none"
@@ -96,9 +101,6 @@
 
       </div>
 
-      <!-- <div class="absolute bottom-72 text-black/40">
-        ( this just joke. you can to scroll down )
-      </div> -->
 
     </div>
   </div>

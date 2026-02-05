@@ -16,6 +16,9 @@
     />
 
 
+    <div class="absolute bottom-6 text-xs text-black/40">
+        Copyright © K5f0 2026  Все права защищены
+    </div>
 
 
     <div
