@@ -5,6 +5,7 @@
         <NuxtPage />
       </Transition>
     </ClientOnly>
+    <Analytics />
   </NuxtLayout>
 </template>
 
@@ -32,6 +33,7 @@
 
 
 <script setup lang="ts">
+import { Analytics } from '@vercel/analytics/nuxt'
 
 onMounted(() => {
   const preventZoom = (e: WheelEvent) => {
