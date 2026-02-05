@@ -10,7 +10,7 @@ Frontend — Nuxt
 Backend — Go (REST API)
 
 ## 🔥 Demo
-👉 https://your-site.com  
+👉 https://k5f0-portfolio.vercel.app/
 
 ## 🛠️ Tech Stack
 
@@ -41,7 +41,7 @@ Frontend — Nuxt
 Backend — Go (REST API)
 
 ## 🔥 Demo
-👉 https://your-site.com  
+👉 https://k5f0-portfolio.vercel.app/  
 
 ## 🛠️ Tech Stack
 
