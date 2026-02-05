@@ -1,7 +1,8 @@
 # Portfolio
 Modern fullstack portfolio website built with Nuxt and Go. Focus on clean architecture, responsive UI, animations, and real-world features.
 
-#ENGLISH
+
+## ENGLISH
 # 🚀 Personal Portfolio Website
 
 A modern fullstack project.  
@@ -33,7 +34,8 @@ Backend — Go (REST API)
 - Clean and maintainable architecture
 
 
-#RUSSIAN
+
+# RUSSIAN
 # 🚀 Personal Portfolio Website
 
 Современный fullstack-проект:  
