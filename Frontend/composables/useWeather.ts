@@ -10,7 +10,13 @@ interface Weather {
 export function useWeather() {
   const weather = ref<Weather | null>(null)
 
-  const weatherType = computed(() => weather.value?.type ?? 'default')
+  type WeatherKind = 'clear' | 'rain' | 'snow' | 'storm' | 'default'
+
+  const weatherType = computed<WeatherKind>(() => {
+    if (!weather.value) return 'default'
+    return weather.value.type.toLowerCase() as WeatherKind
+  })
+
 
   async function fetchWeather() {
     const { public: { apiBase } } = useRuntimeConfig()

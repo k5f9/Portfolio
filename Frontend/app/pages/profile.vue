@@ -14,11 +14,6 @@
       ref="snowCanvas"
       class="snow fixed inset-0 pointer-events-none z-0"
     />
-    <canvas
-      v-if="weatherType === 'fog'"
-      ref="fogCanvas"
-      class="fog fixed inset-0 pointer-events-none z-0"
-    />
 
 
 
