@@ -233,7 +233,11 @@ onMounted(() => {
 
 const temp = computed(() => weather.value?.temp)
 const condition = computed(() => weather.value?.condition)
-console.log(temp, condition)
+watchEffect(() => {
+  console.log('TEMP:', temp.value)
+  console.log('COND:', condition.value)
+})
+
 
 
 
