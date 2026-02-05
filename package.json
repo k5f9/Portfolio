@@ -3,5 +3,8 @@
   "scripts": {
     "build": "cd Frontend && npm install && npm run build",
     "start": "cd Frontend && node .output/server/index.mjs"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.6.1"
   }
 }

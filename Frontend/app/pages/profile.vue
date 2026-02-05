@@ -221,6 +221,7 @@
 
 <script setup lang="ts">
 
+
 import { useWeather } from '../../composables/useWeather'
 
 const { weather, weatherType, fetchWeather } = useWeather()
