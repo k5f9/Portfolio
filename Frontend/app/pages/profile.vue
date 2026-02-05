@@ -225,19 +225,19 @@ import { useWeather } from '../../composables/useWeather'
 
 const { weather, weatherType, fetchWeather } = useWeather()
 
-onMounted(() => {
-  if (!weather.value) {
-    fetchWeather()
-  }
+onMounted(async () => {
+  console.log('MOUNTED')
+  await fetchWeather()
 })
+
 
 const temp = computed(() => weather.value?.temp)
 const condition = computed(() => weather.value?.condition)
-watchEffect(() => {
-  console.log('TEMP:', temp.value)
-  console.log('COND:', condition.value)
-})
 
+
+watch(weather, (v) => {
+  console.log('WEATHER CHANGED:', v)
+})
 
 
 
