@@ -13,9 +13,11 @@ export function useWeather() {
   const weatherType = computed(() => weather.value?.type ?? 'default')
 
   async function fetchWeather() {
-    const res = await fetch('http://localhost:8080/weather')
-    weather.value = await res.json()
+    const baseURL = import.meta.env.NUXT_PUBLIC_API_URL
+    weather.value = await $fetch(`${baseURL}/weather`)
   }
+
+
 
   onMounted(fetchWeather)
 
