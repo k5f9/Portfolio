@@ -254,6 +254,11 @@ watch(
         if (snowCanvas.value) startSnow(snowCanvas.value)
       })
     }
+
+    if (type === 'clear') {
+      console.log('CLEAR WEATHER — NO EFFECT')
+    }
+
   },
   { immediate: true }
 )
