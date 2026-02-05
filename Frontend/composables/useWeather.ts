@@ -8,33 +8,26 @@ interface Weather {
 }
 
 export function useWeather() {
-  const weather = ref<Weather | null>(null)
+  const weather = useState<any | null>('weather', () => null)
 
-  type WeatherKind = 'clear' | 'rain' | 'snow' | 'storm' | 'default'
-
-  const weatherType = computed<WeatherKind>(() => {
+  const weatherType = computed(() => {
     const type = weather.value?.type
     if (!type) return 'default'
-    return type.toLowerCase() as WeatherKind
+    return type.toLowerCase()
   })
-
-
 
   async function fetchWeather() {
     const { public: { apiBase } } = useRuntimeConfig()
     const data = await $fetch(`${apiBase}/weather`)
     console.log('WEATHER RAW:', data)
-    weather.value = data as any
+    weather.value = data
   }
-
-
-
-
 
   onMounted(fetchWeather)
 
   return {
     weather,
-    weatherType
+    weatherType,
   }
 }
+
