@@ -11,8 +11,6 @@ Backend — Go (REST API)
 
 ## 🔥 Demo
 👉 https://your-site.com  
-👉 Frontend: https://your-site.com  
-👉 API: https://api.your-site.com
 
 ## 🛠️ Tech Stack
 
@@ -44,8 +42,6 @@ Backend — Go (REST API)
 
 ## 🔥 Demo
 👉 https://your-site.com  
-👉 Frontend: https://your-site.com  
-👉 API: https://api.your-site.com
 
 ## 🛠️ Tech Stack
 
