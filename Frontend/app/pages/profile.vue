@@ -217,10 +217,11 @@
       </div>
     </div>
   </div>
+  <Analytics />
 </template>
 
 <script setup lang="ts">
-
+import { Analytics } from '@vercel/analytics/next';
 
 import { useWeather } from '../../composables/useWeather'
 
