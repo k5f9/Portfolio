@@ -210,7 +210,7 @@
         <h1 class="absolute top-1 right-3 opacity-50 text-sm">~/weather.ts</h1>
         <h1 class="absolute top-1 left-3 md:opacity-50 opacity-0 ont-semibold text-black/70">Barnaul, Russia</h1>
         <h1 class="absolute top-16 text-2xl text-slate-400 font-bold" >{{ weather }}</h1>
-        <h1 class="absolute font-semibold md:text-8xl text-6xl bottom-5 opacity-70 " >{{ weather }}°C</h1>
+        <h1 class="absolute font-semibold md:text-8xl text-6xl bottom-5 opacity-70 " >{{ weather.temp }}°C</h1>
         <!-- <h1 class="md:text-5xl text-2xl font-bold text-slate-500" v-else>Not found</h1> -->
       </div>
 
@@ -224,9 +224,7 @@
 import { useWeather } from '../../composables/useWeather'
 
 const { weather, weatherType } = useWeather()
-console.log(weather)
-console.log(weather.value)
-console.log(weather.value.temp)
+console.log("const weather = ",weather)
 
 //RAIN
 const rainCanvas = ref<HTMLCanvasElement | null>(null)
